@@ -20,14 +20,14 @@ with open('credential') as f:
 tele = Updater(credential['bot_token'], use_context=True) # @channel_push_bot
 debug_group = tele.bot.get_chat(420074357)
 db = DB()
-push_channel = tele.bot.get_chat('@channel_push')
+channel_push = tele.bot.get_chat('@channel_push')
 
 def findChannels(text):
 	result = []
 	for x in text.split():
 		if not x:
 			continue
-		if x.startsWith('@'):
+		if x.startswith('@'):
 			result.append(Channel('https://t.me/' + x[1:]))
 			continue
 		if 't.me' in x:
@@ -62,8 +62,6 @@ def handlePrivate(update, context):
 	
 @log_on_fail(debug_group)
 def sendPush():
-	global db_pos
-	db_pos += 1
 	channel_push.send_text(random.sample(db.existing.items))
 	if 'test' in sys.args:
 		interval = 10

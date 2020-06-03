@@ -20,7 +20,7 @@ class Channel(object):
 		soup = BeautifulSoup(content, 'html.parser')
 		member = soup.find('div', class_='tgme_page_extra')
 		if not member:
-			reutrn False
+			return False
 		description = soup.find('div', class_='tgme_page_description').text
 		if matchKey(description, db.blacklist.items):
 			return False
@@ -28,8 +28,6 @@ class Channel(object):
 		if len(member_block) > 1:
 			return getCount(member_block[1]) > 10
 		return getCount(member_block[0]) > 150
-
-	def 
 
 	def save(self, db):
 		if not self.passing(db):
