@@ -9,6 +9,7 @@ import os
 import time
 from db import DB
 import random
+import sys
 
 HELP_MESSAGE = '''
 Please send me the channel/group you recommend, we support batch send.
@@ -62,7 +63,7 @@ def handlePrivate(update, context):
 	
 @log_on_fail(debug_group)
 def sendPush():
-	channel_push.send_text(random.sample(db.existing.items))
+	channel_push.send_message(random.sample(db.existing.items, 1)[0])
 	if 'test' in sys.args:
 		interval = 10
 	else:
