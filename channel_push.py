@@ -7,6 +7,8 @@ from telegram_util import log_on_fail
 from channel import Channel
 import os
 import time
+from db import DB
+import random
 
 HELP_MESSAGE = '''
 Please send me the channel/group you recommend, we support batch send.
@@ -17,6 +19,8 @@ with open('credential') as f:
 
 tele = Updater(credential['bot_token'], use_context=True) # @channel_push_bot
 debug_group = tele.bot.get_chat(420074357)
+db = DB()
+push_channel = tele.bot.get_chat('@channel_push')
 
 def findChannels(text):
 	result = []
@@ -30,6 +34,7 @@ def findChannels(text):
 			result.append(Channel(x))
 			continue
 	result = [x for x in result if x.exist()]
+	[x.save() for x in result]
 	return result
 
 def removeOldFiles(d):
@@ -55,7 +60,19 @@ def handlePrivate(update, context):
 	channel_list = [x.getLink() for x in channels]
 	msg.reply_text('Channels/groups recorded:\n' + '\n'.join(channel_list))
 	
+@log_on_fail(debug_group)
+def sendPush():
+	global db_pos
+	db_pos += 1
+	channel_push.send_text(random.sample(db.existing.items))
+	if 'test' in sys.args:
+		interval = 10
+	else:
+		interval = 60 * 60
+	threading.Timer(interval, lambda: os.system(sendPush)).start()
+
 if __name__ == "__main__":
+	sendPush()
 	tele.dispatcher.add_handler(MessageHandler(Filters.private, handlePrivate))
 	tele.start_polling()
 	tele.idle()
