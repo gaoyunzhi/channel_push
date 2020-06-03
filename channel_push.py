@@ -5,6 +5,8 @@ import yaml
 from telegram.ext import Updater, MessageHandler, Filters
 from telegram_util import log_on_fail
 from channel import Channel
+import os
+import time
 
 HELP_MESSAGE = '''
 Please send me the channel/group you recommend, we support batch send.
@@ -30,8 +32,18 @@ def findChannels(text):
 	result = [x for x in result if x.exist()]
 	return result
 
+def removeOldFiles(d):
+	try:
+		for x in os.listdir(d):
+			if os.path.getmtime(d + '/' + x) < time.time() - 60 * 60 * 72 or \
+				os.stat(d + '/' + x).st_size < 400:
+				os.system('rm ' + d + '/' + x)
+	except:
+		pass
+
 @log_on_fail(debug_group)
 def handlePrivate(update, context):
+	removeOldFiles('tmp')
 	msg = update.effective_message
 	if not msg.text:
 		msg.reply_text(HELP_MESSAGE)

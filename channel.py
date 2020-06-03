@@ -8,10 +8,10 @@ class Channel(object):
 		self.link = link
 
 	def exist(self):
-		content = cached_url.get(self.link)
+		content = cached_url.get(self.link, force_cache=True)
 		return 'tgme_page_title' in content
 
-	
+
 
 		
 

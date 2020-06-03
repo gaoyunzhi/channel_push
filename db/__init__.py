@@ -42,8 +42,5 @@ class DB(object):
 		self.reload()
 
 	def reload(self):
-		self.users = DBItem('users')
-		self.keywords = DBItem('keywords')
 		self.existing = DBItem('existing')
 		self.blacklist = DBItem('blacklist')
-		self.whitelist = DBItem('whitelist')
