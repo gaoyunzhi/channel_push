@@ -68,7 +68,7 @@ def recordList():
 
 @log_on_fail(debug_group)
 def sendPush():
-	channel_push.send_message(random.choice(db.existing.items))
+	channel_push.send_message(random.choice(list(db.existing.items)))
 	if random.random() < 0.05:
 		removeOldFiles('tmp')
 		recordList()

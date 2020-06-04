@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 import cached_url
-from telegram_util import matchKey, cupCaption
+from telegram_util import matchKey, cutCaption
 
 def getCount(text):
 	print('getCount', text)
@@ -10,7 +10,9 @@ def getCount(text):
 		return 0
 
 def getCompact(text):
-	return cupCaption(' '.join(text.split()), '', 100)
+	if not text:
+		return '' 
+	return cutCaption(' '.join(text.split()), '', 100)
 
 class Channel(object):
 	def __init__(self, link):
