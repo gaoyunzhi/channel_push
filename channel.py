@@ -25,11 +25,11 @@ class Channel(object):
 		member = soup.find('div', class_='tgme_page_extra')
 		if not member:
 			return False
-		description = soup.find('div', class_='tgme_page_description').text
+		description = soup.find('div', class_='tgme_page_description')
+		description = description and description.text
 		if matchKey(description, db.blacklist.items):
 			return False
 		member_block = member.text.split(',')
-		print('member_block', member_block)
 		if len(member_block) > 1:
 			return getCount(member_block[1]) > 10
 		return getCount(member_block[0]) > 150

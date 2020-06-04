@@ -72,7 +72,7 @@ def sendPush():
 	threading.Timer(interval, sendPush).start()
 
 if __name__ == "__main__":
-	# sendPush()
+	sendPush()
 	tele.dispatcher.add_handler(MessageHandler(Filters.private, handlePrivate))
 	tele.start_polling()
 	tele.idle()
