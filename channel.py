@@ -3,7 +3,11 @@ import cached_url
 from telegram_util import matchKey
 
 def getCount(text):
-	return int(''.join(text.split()[:-1]))
+	print('getCount', text)
+	try:
+		return int(''.join(text.split()[:-1]))
+	except:
+		return 0
 
 class Channel(object):
 	def __init__(self, link):
@@ -24,7 +28,8 @@ class Channel(object):
 		description = soup.find('div', class_='tgme_page_description').text
 		if matchKey(description, db.blacklist.items):
 			return False
-		member_block = member.split()
+		member_block = member.text.split(',')
+		print('member_block', member_block)
 		if len(member_block) > 1:
 			return getCount(member_block[1]) > 10
 		return getCount(member_block[0]) > 150

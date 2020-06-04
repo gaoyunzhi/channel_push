@@ -10,6 +10,7 @@ import time
 from db import DB
 import random
 import sys
+import threading
 
 HELP_MESSAGE = '''
 Please send me the channel/group you recommend, we support batch send.
@@ -35,7 +36,7 @@ def findChannels(text):
 			result.append(Channel(x))
 			continue
 	result = [x for x in result if x.exist()]
-	[x.save() for x in result]
+	[x.save(db) for x in result]
 	return result
 
 def removeOldFiles(d):
@@ -64,14 +65,14 @@ def handlePrivate(update, context):
 @log_on_fail(debug_group)
 def sendPush():
 	channel_push.send_message(random.sample(db.existing.items, 1)[0])
-	if 'test' in sys.args:
+	if 'test' in sys.argv:
 		interval = 10
 	else:
 		interval = 60 * 60
-	threading.Timer(interval, lambda: os.system(sendPush)).start()
+	threading.Timer(interval, sendPush).start()
 
 if __name__ == "__main__":
-	sendPush()
+	# sendPush()
 	tele.dispatcher.add_handler(MessageHandler(Filters.private, handlePrivate))
 	tele.start_polling()
 	tele.idle()
