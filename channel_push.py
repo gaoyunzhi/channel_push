@@ -73,14 +73,9 @@ def sendPush():
 		removeOldFiles('tmp')
 		recordList()
 		commitRepo()
-	if 'test' in sys.argv:
-		interval = 10
-	else:
-		interval = 60 * 60
-	threading.Timer(interval, sendPush).start()
+	threading.Timer(60 * 60, sendPush).start()
 
 if __name__ == "__main__":
-	recordList()
 	sendPush()
 	tele.dispatcher.add_handler(MessageHandler(Filters.private, handlePrivate))
 	tele.start_polling()
