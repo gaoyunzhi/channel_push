@@ -43,9 +43,7 @@ class Channel(object):
 		content = cached_url.get(self.link, force_cache=True)
 		soup = BeautifulSoup(content, 'html.parser')
 		title = getCompact(soup.find('div', class_='tgme_page_title').text)
-		description = soup.find('div', class_='tgme_page_description')
-		description = getCompact(description and description.text)
-		return '[%s](%s)\n%s' % (title, self.link, description)
+		return '[%s](%s)\n' % (title, self.link)
 
 	def save(self, db):
 		if not self.passing(db):
