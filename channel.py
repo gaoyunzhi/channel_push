@@ -12,7 +12,7 @@ def getCount(text):
 def getCompact(text):
 	if not text:
 		return '' 
-	return cutCaption(' '.join(text.split()), '', 100)
+	return cutCaption(' '.join(text.split()), '', 50)
 
 class Channel(object):
 	def __init__(self, link):
