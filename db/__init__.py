@@ -1,7 +1,7 @@
 import os
 import yaml
-import threading
 import time
+from telegram_util import commitRepo
 
 last_commit = 0
 
@@ -10,9 +10,7 @@ def commit():
 	if time.time() - last_commit < 20 * 60:
 		return
 	last_commit = time.time()
-	# see if I need to deal with race condition
-	command = 'git add . > /dev/null 2>&1 && git commit -m commit > /dev/null 2>&1 && git push -u -f > /dev/null 2>&1'
-	threading.Timer(60 * 20, lambda: os.system(command)).start()
+	commitRepo()
 
 def getFile(name):
 	fn = 'db/' + name

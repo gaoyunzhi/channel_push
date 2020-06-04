@@ -3,7 +3,7 @@
 
 import yaml
 from telegram.ext import Updater, MessageHandler, Filters
-from telegram_util import log_on_fail
+from telegram_util import log_on_fail, commitRepo
 from channel import Channel
 import os
 import time
@@ -50,7 +50,6 @@ def removeOldFiles(d):
 
 @log_on_fail(debug_group)
 def handlePrivate(update, context):
-	removeOldFiles('tmp')
 	msg = update.effective_message
 	if not msg.text:
 		msg.reply_text(HELP_MESSAGE)
@@ -62,9 +61,18 @@ def handlePrivate(update, context):
 	channel_list = [x.getLink() for x in channels]
 	msg.reply_text('Channels/groups recorded:\n' + '\n'.join(channel_list))
 	
+def recordList():
+	channel_list = [Channel(x).getRep() for x in db.existing.items]
+	with open('db/channels.md', 'w') as f:
+		f.write('\n\n'.join(channel_list))
+
 @log_on_fail(debug_group)
 def sendPush():
 	channel_push.send_message(random.choice(db.existing.items))
+	if random.random() < 0.05:
+		removeOldFiles('tmp')
+		recordList()
+		commitRepo()
 	if 'test' in sys.argv:
 		interval = 10
 	else:
@@ -72,6 +80,7 @@ def sendPush():
 	threading.Timer(interval, sendPush).start()
 
 if __name__ == "__main__":
+	recordList()
 	sendPush()
 	tele.dispatcher.add_handler(MessageHandler(Filters.private, handlePrivate))
 	tele.start_polling()
