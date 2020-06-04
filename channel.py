@@ -3,7 +3,6 @@ import cached_url
 from telegram_util import matchKey, cutCaption
 
 def getCount(text):
-	print('getCount', text)
 	try:
 		return int(''.join(text.split()[:-1]))
 	except:
