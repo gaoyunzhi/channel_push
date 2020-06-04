@@ -64,7 +64,7 @@ def handlePrivate(update, context):
 	
 @log_on_fail(debug_group)
 def sendPush():
-	channel_push.send_message(random.sample(db.existing.items, 1)[0])
+	channel_push.send_message(random.choice(db.existing.items))
 	if 'test' in sys.argv:
 		interval = 10
 	else:
