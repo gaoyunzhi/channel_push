@@ -76,7 +76,6 @@ def sendPush():
 	threading.Timer(60 * 60, sendPush).start()
 
 if __name__ == "__main__":
-	recordList()
 	sendPush()
 	tele.dispatcher.add_handler(MessageHandler(Filters.private, handlePrivate))
 	tele.start_polling()
