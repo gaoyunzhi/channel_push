@@ -1,157 +1,157 @@
-[关注性别和性少数平权](https://t.me/Sexual_Equality)
-
-
-[读书分享](https://t.me/dushufenxiang)
-
-
-[Solitorian](https://t.me/Solitorian)
-
-
-[Classic 经典英语](https://t.me/english4chinese)
-
-
-[Python for Developers 臺灣暨華人編譯社群 Taiwan](https://t.me/Python4Developer)
-
-
-[帕斯堤同伴群｜Positive Peers Group💕](https://t.me/Hiv_viH)
-
-
-[蛋挞报](https://t.me/pincongessence)
-
-
-[微信搬运工](https://t.me/WeChatEssence)
-
-
-[性别偏见与性别议题](https://t.me/daily_feminist)
-
-
-[ETWGroup](https://t.me/joinchat/INAv702i_mckmPkVnfPMOA)
-
-
-[Python 交流群](https://t.me/py_zh)
-
-
-[Iyouport](https://t.me/iyouport)
-
-
-[群組導航 - 分享/推廣](https://t.me/navi_group_share)
-
-
-[>>> telegram.Bot()](https://t.me/pythontelegrambotgroup)
-
-
-[写作交流](https://t.me/writing_discuss)
-
-
-[民間聲援信息](https://t.me/wildweiguan)
-
-
-[SLGBTQIA大雜燴 - 一個輕鬆聊性別的同溫層](https://t.me/marriage_equality)
-
-
-[BrewNote（青年自由之声）](https://t.me/brewnote2019)
-
-
-[女权观察](https://t.me/feminist_watch)
-
-
-[政治观察](https://t.me/freedom_watch)
-
-
-[文杏馆（藏书分享）](https://t.me/BooksThatMakeYouThink)
-
-
-[网摘精选](https://t.me/web_feed)
-
-
 [微博精选](https://t.me/weibo_read)
-
-
-[電報群推廣](https://t.me/joinchat/F7Z-RT15AV_zH_mUPCQTvQ)
-
-
-[【技术支援群】社会平等与民主化](https://t.me/tech_helpdesk)
-
-
-[🌈 SOGIE 讲座频道 - LGBT 女权 同志 性别 多元](https://t.me/sogie_webinar)
-
-
-[豆瓣小组](https://t.me/doubanners)
-
-
-[Twitter Subscription](https://t.me/twitter_subscriptions)
-
-
-[微博谈](https://t.me/weibotan)
-
-
-[The Sociologist](https://t.me/thesoc)
-
-
-[豆瓣精选](https://t.me/douban_read)
-
-
-[📣文宣中国📣 平反六四](https://t.me/VoiceofCN)
-
-
-[平权观察](https://t.me/equality_and_rights)
-
-
-[【程序员之家】软件项目百例](https://t.me/useless_project_ideas)
-
-
-[python 自学交流](https://t.me/P_Y_T_H_O_N)
-
-
-[新闻实验室](https://t.me/newslab2020)
-
-
-[新闻播报PDF](https://t.me/news_pdf)
-
-
-[Óneiros文学社](https://t.me/oneiroszzz)
-
-
-[Job & career of Taiwan](https://t.me/taiwanjob)
-
-
-[周锋锁](https://t.me/zhoufengsuo)
-
-
-[科学新知](https://t.me/random_knowledge_dushu)
-
-
-[🍁间接游行讨论草案频道🚴‍♂️](https://t.me/doitchinese)
 
 
 [数学及其应用](https://t.me/mathematics_applications)
 
 
-[读书分享](https://t.me/dushufenxiang_chat)
+[>>> telegram.Bot()](https://t.me/pythontelegrambotgroup)
 
 
-[文學部](https://t.me/dailywenxue)
+[关注性别和性少数平权](https://t.me/Sexual_Equality)
 
 
-[反送中已核實資訊頻道](https://t.me/antiextraditionverifiednews)
-
-
-[行动派公民联盟](https://t.me/citizen_united)
-
-
-[TG代理（直连telegram）](https://t.me/socks5list)
-
-
-[墙内反思](https://t.me/qiangneifansi)
-
-
-[英文学习桌](https://t.me/english_learning_discuss)
-
-
-[Matters](https://t.me/thematters)
+[Twitter Subscription](https://t.me/twitter_subscriptions)
 
 
 [🔍🔍🔍sssoou🇨🇳资源搜索](https://t.me/sssoou_resource)
 
 
+[行动派公民联盟](https://t.me/citizen_united)
+
+
+[政治观察](https://t.me/freedom_watch)
+
+
+[📣文宣中国📣 平反六四](https://t.me/VoiceofCN)
+
+
+[豆瓣精选](https://t.me/douban_read)
+
+
+[Job & career of Taiwan](https://t.me/taiwanjob)
+
+
+[【程序员之家】软件项目百例](https://t.me/useless_project_ideas)
+
+
+[反送中已核實資訊頻道](https://t.me/antiextraditionverifiednews)
+
+
+[Python 交流群](https://t.me/py_zh)
+
+
+[新闻实验室](https://t.me/newslab2020)
+
+
+[科学新知](https://t.me/random_knowledge_dushu)
+
+
+[微博谈](https://t.me/weibotan)
+
+
+[SLGBTQIA大雜燴 - 一個輕鬆聊性別的同溫層](https://t.me/marriage_equality)
+
+
+[Solitorian](https://t.me/Solitorian)
+
+
+[性别偏见与性别议题](https://t.me/daily_feminist)
+
+
+[The Sociologist](https://t.me/thesoc)
+
+
+[平权观察](https://t.me/equality_and_rights)
+
+
+[帕斯堤同伴群｜Positive Peers Group💕](https://t.me/Hiv_viH)
+
+
+[【技术支援群】社会平等与民主化](https://t.me/tech_helpdesk)
+
+
+[TG代理（直连telegram）](https://t.me/socks5list)
+
+
+[🌈 SOGIE 讲座频道 - LGBT 女权 同志 性别 多元](https://t.me/sogie_webinar)
+
+
+[Classic 经典英语](https://t.me/english4chinese)
+
+
 [人人翻墙，则墙自倒！](https://t.me/cnhumanright99)
+
+
+[写作交流](https://t.me/writing_discuss)
+
+
+[读书分享](https://t.me/dushufenxiang_chat)
+
+
+[Iyouport](https://t.me/iyouport)
+
+
+[周锋锁](https://t.me/zhoufengsuo)
+
+
+[英文学习桌](https://t.me/english_learning_discuss)
+
+
+[微信搬运工](https://t.me/WeChatEssence)
+
+
+[网摘精选](https://t.me/web_feed)
+
+
+[ETWGroup](https://t.me/joinchat/INAv702i_mckmPkVnfPMOA)
+
+
+[電報群推廣](https://t.me/joinchat/F7Z-RT15AV_zH_mUPCQTvQ)
+
+
+[Óneiros文学社](https://t.me/oneiroszzz)
+
+
+[文杏馆（藏书分享）](https://t.me/BooksThatMakeYouThink)
+
+
+[墙内反思](https://t.me/qiangneifansi)
+
+
+[python 自学交流](https://t.me/P_Y_T_H_O_N)
+
+
+[🍁间接游行讨论草案频道🚴‍♂️](https://t.me/doitchinese)
+
+
+[Matters](https://t.me/thematters)
+
+
+[Python for Developers 臺灣暨華人編譯社群 Taiwan](https://t.me/Python4Developer)
+
+
+[新闻播报PDF](https://t.me/news_pdf)
+
+
+[民間聲援信息](https://t.me/wildweiguan)
+
+
+[群組導航 - 分享/推廣](https://t.me/navi_group_share)
+
+
+[豆瓣小组](https://t.me/doubanners)
+
+
+[BrewNote（青年自由之声）](https://t.me/brewnote2019)
+
+
+[文學部](https://t.me/dailywenxue)
+
+
+[读书分享](https://t.me/dushufenxiang)
+
+
+[蛋挞报](https://t.me/pincongessence)
+
+
+[女权观察](https://t.me/feminist_watch)
