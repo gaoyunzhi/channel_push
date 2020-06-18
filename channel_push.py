@@ -70,7 +70,7 @@ def recordList():
 def sendPush():
 	index = random.randint(0, len(db.existing.items) - 1)
 	channel_push.send_message(list(db.existing.items)[index])
-	debug_group.send_message('#推廣' + list(db.existing.items)[index])
+	debug_group.send_message('#推廣 ' + list(db.existing.items)[index])
 	if random.random() < 0.05:
 		removeOldFiles('tmp')
 		recordList()
