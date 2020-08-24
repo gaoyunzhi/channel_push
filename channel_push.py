@@ -23,7 +23,7 @@ def handlePrivate(update, context):
 	command, text = splitCommand(msg.text)
 	if matchKey(command, ['remove']):
 		channels.remove(text)
-		msg.reply('Removed ' + text)
+		msg.reply_text('Removed ' + text)
 		return
 	count = 0
 	for piece in msg.text.split():
@@ -36,7 +36,7 @@ def handlePrivate(update, context):
 		if 't.me' in piece:
 			count += 1
 			channels.add(piece)
-	msg.reply('Added %s items' % count)
+	msg.reply_text('Added %s items' % count)
 
 @log_on_fail(debug_group)
 def sendPush():
