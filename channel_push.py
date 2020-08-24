@@ -22,20 +22,18 @@ def handlePrivate(update, context):
 		return
 	command, text = splitCommand(msg.text)
 	if matchKey(command, ['remove']):
-		channels.remove(text)
-		msg.reply_text('Removed ' + text)
+		result = channels.remove(text)
+		msg.reply_text('Removed ' + str(result))
 		return
 	count = 0
 	for piece in msg.text.split():
 		if not piece:
 			continue
 		if piece.startswith('@'):
-			count += 1
-			channels.add('https://t.me/' + x[1:])
+			count += channels.add('https://t.me/' + x[1:])
 			continue
 		if 't.me' in piece:
-			count += 1
-			channels.add(piece)
+			count += channels.add(piece)
 	msg.reply_text('Added %s items' % count)
 
 @log_on_fail(debug_group)
