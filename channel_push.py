@@ -16,13 +16,13 @@ channel_push = tele.bot.get_chat('@channel_push')
 channels = plain_db.loadNoKeyDB('existing')
 
 def findChannels(text):
-    result = []
-    for x in text.split():
-        if not x:
-            continue
-        if x.startswith('@'):
-            channels.add('https://t.me/' + x[1:])
-        if 't.me' in x:
+	result = []
+	for x in text.split():
+		if not x:
+			continue
+		if x.startswith('@'):
+			channels.add('https://t.me/' + x[1:])
+		if 't.me' in x:
 
 @log_on_fail(debug_group)
 def handlePrivate(update, context):
@@ -36,16 +36,16 @@ def handlePrivate(update, context):
 		return
 	count = 0
 	for piece in msg.text.split():
-        if not piece:
-            continue
-        if piece.startswith('@'):
-        	count += 1
-            channels.add('https://t.me/' + x[1:])
-            continue
-        if 't.me' in piece:
-        	count += 1
-        	channels.add(piece)
-    msg.reply('Added %s items' % count)
+		if not piece:
+			continue
+		if piece.startswith('@'):
+			count += 1
+			channels.add('https://t.me/' + x[1:])
+			continue
+		if 't.me' in piece:
+			count += 1
+			channels.add(piece)
+	msg.reply('Added %s items' % count)
 
 @log_on_fail(debug_group)
 def sendPush():
