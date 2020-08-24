@@ -11,6 +11,9 @@ from db import DB
 import random
 import sys
 import threading
+import plain_db
+
+channels = plain_db.loadNoKeyDB('existing')
 
 HELP_MESSAGE = '''
 Please send me the channel/group you recommend, we support batch send.
@@ -68,12 +71,8 @@ def recordList():
 
 @log_on_fail(debug_group)
 def sendPush():
-	index = random.randint(0, len(db.existing.items) - 1)
-	channel_push.send_message(list(db.existing.items)[index])
-	if random.random() < 0.05:
-		removeOldFiles('tmp')
-		recordList()
-		commitRepo()
+	index = random.randint(0, len(channels.items()) - 1)
+	channel_push.send_message(list(channels.items())[index])
 	threading.Timer(60 * 60, sendPush).start()
 
 if __name__ == "__main__":
