@@ -13,16 +13,7 @@ with open('credential') as f:
 tele = Updater(token, use_context=True) # @channel_push_bot
 debug_group = tele.bot.get_chat(420074357)
 channel_push = tele.bot.get_chat('@channel_push')
-channels = plain_db.loadNoKeyDB('existing')
-
-def findChannels(text):
-	result = []
-	for x in text.split():
-		if not x:
-			continue
-		if x.startswith('@'):
-			channels.add('https://t.me/' + x[1:])
-		if 't.me' in x:
+channels = plain_db.loadKeyOnlyDB('existing')
 
 @log_on_fail(debug_group)
 def handlePrivate(update, context):
