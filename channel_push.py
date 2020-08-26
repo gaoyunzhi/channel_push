@@ -43,6 +43,7 @@ def getRandomItem():
 
 @log_on_fail(debug_group)
 def sendPush():
+	global recent
 	item = getRandomItem()
 	if len(recent) * 2 >= len(channels.items()):
 		recent = set()
