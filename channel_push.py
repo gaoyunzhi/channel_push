@@ -30,7 +30,7 @@ def handlePrivate(update, context):
 		if not piece:
 			continue
 		if piece.startswith('@'):
-			count += channels.add('https://t.me/' + x[1:])
+			count += channels.add('https://t.me/' + piece[1:])
 			continue
 		if 't.me' in piece:
 			count += channels.add(piece)
