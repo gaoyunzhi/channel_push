@@ -14,6 +14,7 @@ tele = Updater(token, use_context=True) # @channel_push_bot
 debug_group = tele.bot.get_chat(420074357)
 channel_push = tele.bot.get_chat('@channel_push')
 channels = plain_db.loadKeyOnlyDB('existing')
+recent = set()
 
 @log_on_fail(debug_group)
 def handlePrivate(update, context):
@@ -36,10 +37,19 @@ def handlePrivate(update, context):
 			count += channels.add(piece)
 	msg.reply_text('Added %s items' % count)
 
+def getRandomItem():
+	index = random.randint(0, len(channels.items()) - 1)
+	return list(channels.items())[index]
+
 @log_on_fail(debug_group)
 def sendPush():
-	index = random.randint(0, len(channels.items()) - 1)
-	channel_push.send_message(list(channels.items())[index])
+	item = getRandomItem()
+	if len(recent) * 2 >= len(channels.items()):
+		recent = set()
+	while item in recent:
+		item = getRandomItem()
+	recent.add(item)
+	channel_push.send_message(item)
 	threading.Timer(60 * 60, sendPush).start()
 
 if __name__ == "__main__":
