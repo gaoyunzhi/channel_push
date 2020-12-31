@@ -39,7 +39,6 @@ def handlePrivate(update, context):
 
 def getRandomItem():
 	index = random.randint(0, len(channels.items()) - 1)
-	print(index, len(channels.items()))
 	return list(channels.items())[index]
 
 @log_on_fail(debug_group)
